@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="PAGE.title">JEBI — Architecture</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">JEBI<span class="tagline" data-i18n="common.brandTag">AI-native coffee platform</span></a>
+    <nav class="nav">
+      <div class="nav-item">
+        <a class="nav-link" href="index.html"><span data-i18n="nav.home">Home</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.home">Home</div>
+          <a href="index.html#concept" data-i18n="nav.homeSub.concept">Why tokens</a>
+          <a href="index.html#tokens" data-i18n="nav.homeSub.tokens">Token economy</a>
+          <a href="index.html#revenue" data-i18n="nav.homeSub.revenue">Revenue model</a>
+          <a href="index.html#roadmap" data-i18n="nav.homeSub.roadmap">Roadmap</a>
+          <a href="index.html#compliance" data-i18n="nav.homeSub.compliance">Compliance</a>
+          <a class="dd-strong" href="index.html" data-i18n="nav.home">Home</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="franchise.html"><span data-i18n="nav.franchise">Franchise</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.franchise">Franchise</div>
+          <a href="franchise.html#models" data-i18n="nav.franchiseSub.models">Franchise models</a>
+          <a href="franchise.html#services" data-i18n="nav.franchiseSub.services">AI service plans</a>
+          <a href="franchise.html#sop" data-i18n="nav.franchiseSub.sop">Daily SOP</a>
+          <a href="franchise.html#data" data-i18n="nav.franchiseSub.data">Data &amp; rewards</a>
+          <a href="franchise.html#faq" data-i18n="nav.franchiseSub.faq">FAQ</a>
+          <a class="dd-strong" href="franchise.html" data-i18n="nav.franchise">Franchise</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="demo.html"><span data-i18n="nav.demo">Live demo</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.demo">Live demo</div>
+          <a href="demo.html#quote" data-i18n="nav.demoSub.quote">Price quote</a>
+          <a href="demo.html#recommend" data-i18n="nav.demoSub.recommend">AI recommendation</a>
+          <a href="demo.html#audit" data-i18n="nav.demoSub.audit">Usage audit</a>
+          <a class="dd-strong" href="demo.html" data-i18n="nav.demo">Live demo</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link active" href="architecture.html"><span data-i18n="nav.arch">Architecture</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.arch">Architecture</div>
+          <a href="architecture.html#layers" data-i18n="nav.archSub.layers">System layers</a>
+          <a href="architecture.html#api" data-i18n="nav.archSub.api">API routes</a>
+          <a href="architecture.html#contracts" data-i18n="nav.archSub.contracts">Smart contracts</a>
+          <a href="architecture.html#dataflow" data-i18n="nav.archSub.dataflow">Data flow</a>
+          <a class="dd-strong" href="architecture.html" data-i18n="nav.arch">Architecture</a>
+        </div>
+      </div>
+    </nav>
+    <button class="lang-btn" id="langBtn" data-i18n-title="nav.langTitle" aria-label="Language"><span>🌐</span><span id="langLabel">EN</span></button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero alt">
+  <div class="container">
+    <span class="badge gold" data-i18n="arch.heroBadge">System Architecture</span>
+    <h1 data-i18n="arch.heroTitle">A runnable tech stack</h1>
+    <p class="lead" data-i18n="arch.heroLead">FastAPI gateway + DeepSeek integration + unified JBP metering + Solidity on-chain attestation.</p>
+  </div>
+</section>
+
+<!-- 分层架构 -->
+<section class="section" id="layers" style="padding-top:52px;">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="arch.layersKicker">Layers</span>
+      <h2 data-i18n="arch.layersTitle">System layers</h2>
+    </div>
+    <div class="reveal">
+      <div class="arch-layer"><div class="layer-title"><span class="num">1</span><span data-i18n="arch.l1.t">Access layer · API Gateway</span></div><div class="arch-pills"><span data-i18n="arch.l1.pills">Auth · Rate limiting · Billing entry (JBP) · FastAPI + CORS</span></div></div>
+      <div class="arch-flow">▼</div>
+      <div class="arch-layer"><div class="layer-title"><span class="num">2</span><span data-i18n="arch.l2.t">Service layer · Business microservices</span></div><div class="arch-pills"><span data-i18n="arch.l2.pills">recommendation · supply-chain · quality-inspection · ledger</span></div></div>
+      <div class="arch-flow">▼</div>
+      <div class="arch-layer"><div class="layer-title"><span class="num">3</span><span data-i18n="arch.l3.t">Model layer · Jebi Brain (DeepSeek)</span></div><div class="arch-pills"><span data-i18n="arch.l3.pills">api.deepseek.com/v1 · deepseek-chat · prompt library · JSON output · demo mode</span></div></div>
+      <div class="arch-flow">▼</div>
+      <div class="arch-layer"><div class="layer-title"><span class="num">4</span><span data-i18n="arch.l4.t">Metering layer · Unified pricing</span></div><div class="arch-pills"><span data-i18n="arch.l4.pills">real-usage cost · role pricing · subscription 0 · ceil rounding</span></div></div>
+      <div class="arch-flow">▼</div>
+      <div class="arch-layer"><div class="layer-title"><span class="num">5</span><span data-i18n="arch.l5.t">Data &amp; on-chain · Ledger + attestation</span></div><div class="arch-pills"><span data-i18n="arch.l5.pills">SQLite/PostgreSQL · ai_usage_logs · jbp_ledger · Solidity · consortium/public chain</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- API 路由 -->
+<section class="section alt" id="api">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="arch.apiKicker">API</span>
+      <h2 data-i18n="arch.apiTitle">API routes (the running demo is calling them)</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <thead><tr><th data-i18n="arch.api.h1">Method &amp; path</th><th data-i18n="arch.api.h2">Function</th><th data-i18n="arch.api.h3">Billing</th></tr></thead>
+        <tbody>
+          <tr><td class="mono" data-i18n="arch.api.r1c1">POST /api/v1/recommend/personalized</td><td data-i18n="arch.api.r1c2">AI personalized recommendation (Jebi Brain)</td><td data-i18n="arch.api.r1c3">Charged JBP by role</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r2c1">POST /api/v1/billing/quote</td><td data-i18n="arch.api.r2c2">Price quote (no charge)</td><td data-i18n="arch.api.r2c3">—</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r3c1">GET /api/v1/users/{id}/balance</td><td data-i18n="arch.api.r3c2">Balance query</td><td data-i18n="arch.api.r3c3">—</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r4c1">POST /api/v1/users/{id}/topup</td><td data-i18n="arch.api.r4c2">JBP top-up (caps)</td><td data-i18n="arch.api.r4c3">—</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r5c1">POST /api/v1/users/{id}/subscribe</td><td data-i18n="arch.api.r5c2">Activate subscription (demo helper)</td><td data-i18n="arch.api.r5c3">—</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r6c1">POST /api/v1/users/{id}/refund</td><td data-i18n="arch.api.r6c2">7-day cooling-off refund</td><td data-i18n="arch.api.r6c3">—</td></tr>
+          <tr><td class="mono" data-i18n="arch.api.r7c1">GET /api/v1/admin/usage/summary</td><td data-i18n="arch.api.r7c2">Usage audit (cost vs charged)</td><td data-i18n="arch.api.r7c3">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 合约 -->
+<section class="section" id="contracts">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="arch.ctKicker">Contracts</span>
+      <h2 data-i18n="arch.ctTitle">On-chain contracts &amp; deployment</h2>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <thead><tr><th data-i18n="arch.ct.h1">Contract</th><th data-i18n="arch.ct.h2">Standard</th><th data-i18n="arch.ct.h3">Role</th><th data-i18n="arch.ct.h4">Key fixes</th></tr></thead>
+        <tbody>
+          <tr><td class="mono" data-i18n="arch.ct.r1c1">JebiPoint</td><td data-i18n="arch.ct.r1c2">ERC-20</td><td data-i18n="arch.ct.r1c3">JBP points ledger (consortium chain)</td><td data-i18n="arch.ct.r1c4">Whitelisted minters, reason-carrying mint/burn</td></tr>
+          <tr><td class="mono" data-i18n="arch.ct.r2c1">CoffeeWarehouseReceipt</td><td data-i18n="arch.ct.r2c2">ERC-1155</td><td data-i18n="arch.ct.r2c3">Coffee receipt (registration no.)</td><td data-i18n="arch.ct.r2c4">uri() fallback · minter whitelist</td></tr>
+          <tr><td class="mono" data-i18n="arch.ct.r3c1">RoastPackageToken</td><td data-i18n="arch.ct.r3c2">ERC-721</td><td data-i18n="arch.ct.r3c3">Roast-pack certificate (escrow)</td><td data-i18n="arch.ct.r3c4">CEI · nonReentrant · existence checks</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card reveal" style="margin-top:18px;">
+      <h3 data-i18n="arch.deployH">🔧 Deployment order</h3>
+      <div class="mono" data-i18n-html="arch.deploy" style="line-height:2.1; font-size:13.5px; margin-top:8px;">cd chain && npm install<br/>npx hardhat test<br/>npx hardhat run scripts/deploy.js --network localhost</div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据流 -->
+<section class="section alt" id="dataflow">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="arch.flowKicker">Data Flow</span>
+      <h2 data-i18n="arch.flowTitle">Data flow of one cup of coffee</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b data-i18n="arch.flow.s1.b">Order</b><span data-i18n="arch.flow.s1.s">User scans to order, chooses payment</span></div>
+      <div class="step"><b data-i18n="arch.flow.s2.b">Order &amp; points</b><span data-i18n="arch.flow.s2.s">Order Service creates the order; JBP granted on payment (1 CNY = 1 JBP)</span></div>
+      <div class="step"><b data-i18n="arch.flow.s3.b">AI profile</b><span data-i18n="arch.flow.s3.s">Jebi Brain updates the taste profile (meter first, price second)</span></div>
+      <div class="step"><b data-i18n="arch.flow.s4.b">Inventory</b><span data-i18n="arch.flow.s4.s">Real-time deduction; below threshold triggers AI restock suggestion</span></div>
+      <div class="step"><b data-i18n="arch.flow.s5.b">On-chain attestation</b><span data-i18n="arch.flow.s5.s">Key hashes anchored on chain after closing</span></div>
+      <div class="step"><b data-i18n="arch.flow.s6.b">Franchisee report</b><span data-i18n="arch.flow.s6.s">Owner app: profit, JBP consumption, AI suggestions, audit details</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 技术栈 -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="arch.stackKicker">Stack</span>
+      <h2 data-i18n="arch.stackTitle">Tech stack at a glance</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="card"><h3 data-i18n="arch.s1.h">🐍 Backend</h3><ul><li data-i18n="arch.s1.li1">FastAPI + Uvicorn</li><li data-i18n="arch.s1.li2">SQLite (demo) / PostgreSQL (prod)</li><li data-i18n="arch.s1.li3">openai SDK (DeepSeek-compatible)</li></ul></div>
+      <div class="card"><h3 data-i18n="arch.s2.h">⛓️ On-chain</h3><ul><li data-i18n="arch.s2.li1">Solidity 0.8.24 + OZ v5</li><li data-i18n="arch.s2.li2">Hardhat (compile / test / deploy)</li><li data-i18n="arch.s2.li3">EVM cancun (OZ mcopy)</li></ul></div>
+      <div class="card"><h3 data-i18n="arch.s3.h">🌐 Frontend</h3><ul><li data-i18n="arch.s3.li1">Vanilla HTML/CSS/JS</li><li data-i18n="arch.s3.li2">Same-origin static mount via FastAPI</li><li data-i18n="arch.s3.li3">Jebi API client with graceful degradation</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid grid-3">
+      <div>
+        <div class="brand" style="font-size:24px;">JEBI</div>
+        <p style="font-size:13.5px; color:var(--text-2); margin-top:10px;" data-i18n="common.brandTag">AI-native coffee platform</p>
+      </div>
+      <div>
+        <h4 data-i18n="common.links">Links</h4>
+        <a href="index.html" data-i18n="common.backHome">Home</a>
+        <a href="franchise.html" data-i18n="common.franchiseManual">Franchise manual</a>
+        <a href="demo.html" data-i18n="common.viewDemo">Live demo</a>
+        <a href="architecture.html" data-i18n="common.techArch">Architecture</a>
+      </div>
+      <div>
+        <h4 data-i18n="common.lang">Language</h4>
+        <a href="#" data-lang-link="en">English</a>
+        <a href="#" data-lang-link="zh">简体中文</a>
+        <a href="#" data-lang-link="ar">العربية السعودية</a>
+      </div>
+    </div>
+    <div class="disclaimer" data-i18n="common.disclaimer">Disclaimer: technical reference demo — not investment advice.</div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--text-2);" data-i18n="common.copyright">© <span id="year">2025</span> JEBI · jebi.one</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="langModal" hidden>
+  <div class="modal">
+    <div class="brand" style="font-size:30px;">JEBI</div>
+    <h2 data-i18n="modal.title">Choose your language</h2>
+    <p class="sub" data-i18n="modal.subtitle">The website will be displayed in your chosen language.</p>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span><b data-i18n="modal.en">English</b><span data-i18n="modal.enDesc">English</span></span></button>
+      <button class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span><span><b data-i18n="modal.zh">简体中文</b><span data-i18n="modal.zhDesc">Mandarin Chinese</span></span></button>
+      <button class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span><span><b data-i18n="modal.ar">العربية السعودية</b><span data-i18n="modal.arDesc">Saudi Arabic</span></span></button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/i18n-core.js"></script>
+<script src="assets/js/i18n-shared.js"></script>
+<script src="assets/js/i18n-arch.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>

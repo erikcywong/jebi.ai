@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="PAGE.title">JEBI — Live Demo</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">JEBI<span class="tagline" data-i18n="common.brandTag">AI-native coffee platform</span></a>
+    <nav class="nav">
+      <div class="nav-item">
+        <a class="nav-link" href="index.html"><span data-i18n="nav.home">Home</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.home">Home</div>
+          <a href="index.html#concept" data-i18n="nav.homeSub.concept">Why tokens</a>
+          <a href="index.html#tokens" data-i18n="nav.homeSub.tokens">Token economy</a>
+          <a href="index.html#revenue" data-i18n="nav.homeSub.revenue">Revenue model</a>
+          <a href="index.html#roadmap" data-i18n="nav.homeSub.roadmap">Roadmap</a>
+          <a href="index.html#compliance" data-i18n="nav.homeSub.compliance">Compliance</a>
+          <a class="dd-strong" href="index.html" data-i18n="nav.home">Home</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="franchise.html"><span data-i18n="nav.franchise">Franchise</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.franchise">Franchise</div>
+          <a href="franchise.html#models" data-i18n="nav.franchiseSub.models">Franchise models</a>
+          <a href="franchise.html#services" data-i18n="nav.franchiseSub.services">AI service plans</a>
+          <a href="franchise.html#sop" data-i18n="nav.franchiseSub.sop">Daily SOP</a>
+          <a href="franchise.html#data" data-i18n="nav.franchiseSub.data">Data &amp; rewards</a>
+          <a href="franchise.html#faq" data-i18n="nav.franchiseSub.faq">FAQ</a>
+          <a class="dd-strong" href="franchise.html" data-i18n="nav.franchise">Franchise</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link active" href="demo.html"><span data-i18n="nav.demo">Live demo</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.demo">Live demo</div>
+          <a href="demo.html#quote" data-i18n="nav.demoSub.quote">Price quote</a>
+          <a href="demo.html#recommend" data-i18n="nav.demoSub.recommend">AI recommendation</a>
+          <a href="demo.html#audit" data-i18n="nav.demoSub.audit">Usage audit</a>
+          <a class="dd-strong" href="demo.html" data-i18n="nav.demo">Live demo</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="architecture.html"><span data-i18n="nav.arch">Architecture</span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.arch">Architecture</div>
+          <a href="architecture.html#layers" data-i18n="nav.archSub.layers">System layers</a>
+          <a href="architecture.html#api" data-i18n="nav.archSub.api">API routes</a>
+          <a href="architecture.html#contracts" data-i18n="nav.archSub.contracts">Smart contracts</a>
+          <a href="architecture.html#dataflow" data-i18n="nav.archSub.dataflow">Data flow</a>
+          <a class="dd-strong" href="architecture.html" data-i18n="nav.arch">Architecture</a>
+        </div>
+      </div>
+    </nav>
+    <button class="lang-btn" id="langBtn" data-i18n-title="nav.langTitle" aria-label="Language"><span>🌐</span><span id="langLabel">EN</span></button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="demo-hero">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <span class="kicker" data-i18n="demo.heroKicker">Live Demo</span>
+        <h1 style="font-size:clamp(26px,3.6vw,38px); margin-top:8px;" data-i18n="demo.heroTitle">Jebi Brain live demo console</h1>
+        <p style="color:var(--text-2); margin-top:6px; max-width:640px;" data-i18n="demo.heroLead">Connected to a real backend: top up JBP → price quote → AI recommendation → metered deduction → usage audit.</p>
+      </div>
+      <span class="demo-status" id="connStatus"><span class="dot" id="connDot"></span><span id="connText" data-i18n="status.connecting">Connecting…</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:36px;">
+  <div class="container">
+    <div class="flow-strip" id="flowStrip">
+      <div class="card"><b data-i18n="demo.flow1.b">Meter</b><span data-i18n="demo.flow1.s">Cost DeepSeek from actual usage</span></div>
+      <div class="card"><b data-i18n="demo.flow2.b">Price</b><span data-i18n="demo.flow2.s">Price by role (cost × N, floor)</span></div>
+      <div class="card"><b data-i18n="demo.flow3.b">Charge</b><span data-i18n="demo.flow3.s">Deduct JBP; reject when low</span></div>
+      <div class="card"><b data-i18n="demo.flow4.b">Record</b><span data-i18n="demo.flow4.s">Write ai_usage_logs for audit</span></div>
+    </div>
+
+    <div class="demo-layout">
+      <div class="panel">
+        <h3 data-i18n="demo.user.h3">👤 User &amp; balance <span class="hint" data-i18n="demo.user.hint">Role decides pricing</span></h3>
+        <div class="role-cards" id="roleCards">
+          <button class="role-card" data-role="business"><b data-i18n="demo.role.business.b">Franchisee (B-side)</b><span data-i18n="demo.role.business.s">Cost × 5 · floor 50 JBP/call</span></button>
+          <button class="role-card" data-role="consumer_bundle"><b data-i18n="demo.role.bundle.b">Consumer · subscription</b><span data-i18n="demo.role.bundle.s">0 JBP within the plan</span></button>
+          <button class="role-card" data-role="consumer_payg"><b data-i18n="demo.role.payg.b">Consumer · pay-as-you-go</b><span data-i18n="demo.role.payg.s">Cost × 3 · floor 10 JBP/call</span></button>
+        </div>
+        <div class="field-row">
+          <div class="field" style="margin:0;">
+            <label data-i18n="demo.userId">User ID (anonymized)</label>
+            <input id="userId" value="demo_user" />
+          </div>
+          <button class="btn outline small" id="genId" data-i18n="demo.gen">Random</button>
+        </div>
+        <div class="field" style="margin-top:12px;">
+          <label data-i18n="demo.topupLabel">Top up JBP (1 JBP = 0.1 CNY, single ≤ 10,000)</label>
+          <div class="field-row">
+            <input id="topupAmt" type="number" min="1" max="10000" value="1000" />
+            <button class="btn primary small" id="btnTopup" data-i18n="demo.topupBtn">Top up</button>
+          </div>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="kpi"><b id="kpiBalance">–</b><span data-i18n="demo.kpiBalance">JBP balance</span></div>
+          <div class="kpi"><b id="kpiSub">–</b><span data-i18n="demo.kpiSub">Subscription</span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn outline small" id="btnSubscribe" style="display:none;" data-i18n="demo.subBtn">Activate subscription (demo)</button>
+          <button class="btn outline small" id="btnRefund" data-i18n="demo.refundBtn">7-day cooling-off refund</button>
+        </div>
+        <hr class="divider" />
+        <div class="mono" data-i18n-html="demo.legend" style="font-size:12px; color:var(--text-2); line-height:1.9;">Role pricing (same call):<br/>B-side: cost × 5, floor <b>50 JBP</b> (5 CNY)<br/>Subscription: <b>0 JBP</b><br/>Pay-as-you-go: cost × 3, floor <b>10 JBP</b></div>
+      </div>
+
+      <div style="display:grid; gap:18px;">
+        <div id="msgBox" class="msg-banner"></div>
+
+        <div class="panel" id="quote">
+          <h3 data-i18n="demo.quote.h3">⚡ Price quote (no charge) <span class="hint" data-i18n="demo.quote.hint">Typical call: ~700 tokens</span></h3>
+          <div class="kpi-grid">
+            <div class="kpi"><b id="qCost">–</b><span data-i18n="demo.kpiCost">DeepSeek cost (CNY)</span></div>
+            <div class="kpi"><b id="qJbp">–</b><span data-i18n="demo.kpiJbp">Charged JBP</span></div>
+            <div class="kpi"><b id="qMarkup">–</b><span data-i18n="demo.kpiMarkup">Markup</span></div>
+          </div>
+          <p id="qNote" class="mono" style="font-size:12.5px; color:var(--text-2); margin-bottom:12px;"></p>
+          <button class="btn outline small" id="btnQuote" data-i18n="demo.refreshQuote">Refresh quote</button>
+        </div>
+
+        <div class="panel" id="recommend">
+          <h3 data-i18n="demo.rec.h3">🧠 AI personalized recommendation <span class="hint" data-i18n="demo.rec.hint">Real metering · demo data</span></h3>
+          <div class="field">
+            <label data-i18n="demo.history">History (click to select, multiple)</label>
+            <div class="chips" id="historyChips">
+              <span class="chip" data-v="Latte">Latte</span>
+              <span class="chip" data-v="Cold Brew">Cold Brew</span>
+              <span class="chip" data-v="Espresso">Espresso</span>
+              <span class="chip" data-v="Mocha">Mocha</span>
+              <span class="chip" data-v="Americano">Americano</span>
+              <span class="chip" data-v="Cappuccino">Cappuccino</span>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+            <div class="field"><label data-i18n="demo.weather">Weather</label><select id="weather"><option data-i18n="demo.weatherOpt.sunny">Sunny</option><option data-i18n="demo.weatherOpt.cloudy">Partly cloudy</option><option data-i18n="demo.weatherOpt.overcast">Overcast</option><option data-i18n="demo.weatherOpt.rain">Rain</option><option data-i18n="demo.weatherOpt.snow">Snow</option></select></div>
+            <div class="field"><label data-i18n="demo.time">Time of day</label><select id="timeOfDay"><option value="morning" data-i18n="demo.timeOpt.morning">Morning</option><option value="afternoon" data-i18n="demo.timeOpt.afternoon">Afternoon</option><option value="evening" data-i18n="demo.timeOpt.evening">Evening</option><option value="night" data-i18n="demo.timeOpt.night">Night</option></select></div>
+            <div class="field"><label data-i18n="demo.budget">Budget (CNY)</label><input id="budget" type="number" min="0" value="30" /></div>
+          </div>
+          <div class="field">
+            <label data-i18n="demo.diet">Dietary preferences</label>
+            <div class="chips" id="dietChips">
+              <span class="chip" data-v="plant-milk" data-i18n="demo.dietOpt.plantMilk">Plant milk</span>
+              <span class="chip" data-v="low-sugar" data-i18n="demo.dietOpt.lowSugar">Low sugar</span>
+              <span class="chip" data-v="no-caffeine" data-i18n="demo.dietOpt.noCaffeine">Decaf</span>
+            </div>
+          </div>
+          <button class="btn dark" id="btnRecommend" style="width:100%;" data-i18n="demo.recommendBtn">Generate recommendation</button>
+          <div id="recCard" style="display:none; margin-top:16px;"></div>
+        </div>
+
+        <div class="panel" id="audit">
+          <h3 data-i18n="demo.audit.h3">📊 Usage audit <span class="hint" data-i18n="demo.audit.hint">Reconcile with DeepSeek invoices</span></h3>
+          <div class="kpi-grid">
+            <div class="kpi"><b id="sCalls">–</b><span data-i18n="demo.kpiCalls">Total calls</span></div>
+            <div class="kpi"><b id="sCost">–</b><span data-i18n="demo.kpiCostSum">Total cost (CNY)</span></div>
+            <div class="kpi"><b id="sCharged">–</b><span data-i18n="demo.kpiCharged">Total charged (JBP)</span></div>
+          </div>
+          <button class="btn outline small" id="btnSummary" style="width:100%;" data-i18n="demo.refreshAudit">Refresh audit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:22px; border-color:rgba(212,168,84,0.4);">
+      <h3 style="font-size:15px;" data-i18n="demo.note.h3">ℹ️ Demo notes</h3>
+      <p style="font-size:13.5px; color:var(--text-2); margin-top:6px;" data-i18n-html="demo.noteP">Without DEEPSEEK_API_KEY the backend returns built-in demo data; with a key it switches to real DeepSeek automatically.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid grid-3">
+      <div>
+        <div class="brand" style="font-size:24px;">JEBI</div>
+        <p style="font-size:13.5px; color:var(--text-2); margin-top:10px;" data-i18n="common.brandTag">AI-native coffee platform</p>
+      </div>
+      <div>
+        <h4 data-i18n="common.links">Links</h4>
+        <a href="index.html" data-i18n="common.backHome">Home</a>
+        <a href="franchise.html" data-i18n="common.franchiseManual">Franchise manual</a>
+        <a href="demo.html" data-i18n="common.viewDemo">Live demo</a>
+        <a href="architecture.html" data-i18n="common.techArch">Architecture</a>
+      </div>
+      <div>
+        <h4 data-i18n="common.lang">Language</h4>
+        <a href="#" data-lang-link="en">English</a>
+        <a href="#" data-lang-link="zh">简体中文</a>
+        <a href="#" data-lang-link="ar">العربية السعودية</a>
+      </div>
+    </div>
+    <div class="disclaimer" data-i18n="common.disclaimer">Disclaimer: technical reference demo — not investment advice.</div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--text-2);" data-i18n="common.copyright">© <span id="year">2025</span> JEBI · jebi.one</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="langModal" hidden>
+  <div class="modal">
+    <div class="brand" style="font-size:30px;">JEBI</div>
+    <h2 data-i18n="modal.title">Choose your language</h2>
+    <p class="sub" data-i18n="modal.subtitle">The website will be displayed in your chosen language.</p>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span><b data-i18n="modal.en">English</b><span data-i18n="modal.enDesc">English</span></span></button>
+      <button class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span><span><b data-i18n="modal.zh">简体中文</b><span data-i18n="modal.zhDesc">Mandarin Chinese</span></span></button>
+      <button class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span><span><b data-i18n="modal.ar">العربية السعودية</b><span data-i18n="modal.arDesc">Saudi Arabic</span></span></button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/i18n-core.js"></script>
+<script src="assets/js/i18n-shared.js"></script>
+<script src="assets/js/i18n-demo.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>
