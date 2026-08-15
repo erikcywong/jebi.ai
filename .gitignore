@@ -1,0 +1,24 @@
+# ---- Python / 后端 ----
+__pycache__/
+*.py[cod]
+backend/.venv/
+.venv/
+
+# ---- 数据与密钥（绝不入库） ----
+backend/jebi.db
+backend/.env
+.env
+*.local
+
+# ---- Node / Hardhat ----
+node_modules/
+chain/node_modules/
+chain/artifacts/
+chain/cache/
+chain/scripts/deployment.json
+
+# ---- OS / 编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

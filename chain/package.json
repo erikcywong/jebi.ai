@@ -1,0 +1,19 @@
+{
+  "name": "jebi-chain",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Jebi Coffee 链上工程：JBP 积分台账 / 仓单 / 烘焙包（Hardhat）",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
