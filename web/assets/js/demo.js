@@ -100,6 +100,7 @@
   /* ---------- 预报价 ---------- */
   async function doQuote() {
     clearMsg();
+    if (!$('qCost') || !$('qJbp')) return; // 子页面无报价面板时跳过
     try {
       var q = await api.quote(payload(), state.role);
       $('qCost').textContent = q.cost_cny.toFixed(4);
@@ -111,6 +112,7 @@
 
   /* ---------- 推荐 ---------- */
   function renderRec(r) {
+    if (!$('recCard')) return; // 子页面无推荐面板时跳过
     var conf = Math.max(0, Math.min(1, r.confidence)) * 100;
     var alts = (r.alternatives || []).map(function (a) { return '<span class="tag">' + esc(a) + '</span>'; }).join(' ');
     var chargedHtml = r.charged_jbp > 0
@@ -130,6 +132,7 @@
 
   async function doRecommend() {
     clearMsg();
+    if (!$('btnRecommend') || !$('recCard')) return;
     $('btnRecommend').disabled = true;
     $('btnRecommend').textContent = t('demo.recommendBtnRun');
     try {
@@ -147,6 +150,7 @@
 
   /* ---------- 对账 ---------- */
   async function refreshSummary() {
+    if (!$('sCalls') || !$('sCharged')) return; // 子页面无对账面板时跳过
     try {
       var s = await api.summary();
       $('sCalls').textContent = String(s.calls);
@@ -204,9 +208,9 @@
     $('btnTopup').addEventListener('click', doTopup);
     $('btnRefund').addEventListener('click', doRefund);
     $('btnSubscribe').addEventListener('click', doSubscribe);
-    $('btnSummary').addEventListener('click', refreshSummary);
-    $('btnRecommend').addEventListener('click', doRecommend);
-    $('btnQuote').addEventListener('click', doQuote);
+    if ($('btnSummary')) $('btnSummary').addEventListener('click', refreshSummary);
+    if ($('btnRecommend')) $('btnRecommend').addEventListener('click', doRecommend);
+    if ($('btnQuote')) $('btnQuote').addEventListener('click', doQuote);
 
     /* 语言切换后：清理动态结果并刷新 */
     document.addEventListener('jebi:langchange', function () {

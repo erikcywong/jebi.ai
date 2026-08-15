@@ -38,6 +38,31 @@
   var yr = document.getElementById('year');
   if (yr) yr.textContent = String(new Date().getFullYear());
 
+  /* 复制按钮（微信等） */
+  document.querySelectorAll('[data-copy]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var text = el.getAttribute('data-copy');
+      var orig = el.textContent;
+      var done = function () {
+        var label = (window.JebiI18N ? window.JebiI18N.t('contact.copied') : 'Copied!');
+        el.textContent = label;
+        setTimeout(function () { el.textContent = orig; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (err) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    });
+  });
+
   /* 页脚语言切换 */
   document.querySelectorAll('[data-lang-link]').forEach(function (btn) {
     btn.addEventListener('click', function (e) {

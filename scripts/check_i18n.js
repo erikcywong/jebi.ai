@@ -18,7 +18,8 @@ require('../web/assets/js/i18n-demo.js');
 require('../web/assets/js/i18n-arch.js');
 
 const webDir = path.join(__dirname, '..', 'web');
-const pages = ['index.html', 'franchise.html', 'demo.html', 'architecture.html'];
+
+const pages = fs.readdirSync(webDir).filter(function (f) { return f.endsWith('.html'); });
 const attrRe = /data-i18n(?:-html|-placeholder|-title|-aria)?="([^"]+)"/g;
 
 const used = new Set();

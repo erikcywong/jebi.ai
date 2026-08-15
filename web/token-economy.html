@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="index.dualTitle">JEBI</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">JEBI<span class="tagline" data-i18n="common.brandTag"></span></a>
+    <nav class="nav">
+      <div class="nav-item">
+        <a class="nav-link active" href="index.html"><span data-i18n="nav.home"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.home"></div>
+          <a href="concept.html" data-i18n="nav.homeSub.concept"></a>
+          <a href="token-economy.html" data-i18n="nav.homeSub.tokens"></a>
+          <a href="revenue.html" data-i18n="nav.homeSub.revenue"></a>
+          <a href="roadmap.html" data-i18n="nav.homeSub.roadmap"></a>
+          <a href="compliance.html" data-i18n="nav.homeSub.compliance"></a>
+          <a class="dd-strong" href="index.html" data-i18n="nav.home"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="franchise.html"><span data-i18n="nav.franchise"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.franchise"></div>
+          <a href="franchise-models.html" data-i18n="nav.franchiseSub.models"></a>
+          <a href="ai-services.html" data-i18n="nav.franchiseSub.services"></a>
+          <a href="daily-sop.html" data-i18n="nav.franchiseSub.sop"></a>
+          <a href="data-rewards.html" data-i18n="nav.franchiseSub.data"></a>
+          <a href="faq.html" data-i18n="nav.franchiseSub.faq"></a>
+          <a class="dd-strong" href="franchise.html" data-i18n="nav.franchise"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="demo.html"><span data-i18n="nav.demo"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.demo"></div>
+          <a href="price-quote.html" data-i18n="nav.demoSub.quote"></a>
+          <a href="ai-recommendation.html" data-i18n="nav.demoSub.recommend"></a>
+          <a href="usage-audit.html" data-i18n="nav.demoSub.audit"></a>
+          <a class="dd-strong" href="demo.html" data-i18n="nav.demo"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="architecture.html"><span data-i18n="nav.arch"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.arch"></div>
+          <a href="system-layers.html" data-i18n="nav.archSub.layers"></a>
+          <a href="api-routes.html" data-i18n="nav.archSub.api"></a>
+          <a href="smart-contracts.html" data-i18n="nav.archSub.contracts"></a>
+          <a href="data-flow.html" data-i18n="nav.archSub.dataflow"></a>
+          <a class="dd-strong" href="architecture.html" data-i18n="nav.arch"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="contact.html"><span data-i18n="nav.contact"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.contact"></div>
+          <a href="https://wa.me/85293188252" target="_blank" rel="noopener" data-i18n="nav.contactSub.whatsapp"></a>
+          <a href="#" data-copy="+8615800222338" data-i18n="nav.contactSub.wechat"></a>
+          <a href="mailto:erik.wong@napell.bio" data-i18n="nav.contactSub.email"></a>
+          <a class="dd-strong" href="contact.html" data-i18n="nav.contact"></a>
+        </div>
+      </div>
+    </nav>
+    <button class="lang-btn" id="langBtn" data-i18n-title="nav.langTitle" aria-label="Language"><span>🌐</span><span id="langLabel">EN</span></button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero alt">
+  <div class="container">
+    <span class="badge gold" data-i18n="index.dualKicker"></span>
+    <h1 data-i18n="index.dualTitle"></h1>
+    <p class="lead" data-i18n="index.dualDesc"></p>
+  </div>
+</section>
+
+<section class="section" id="tokens">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.dualKicker">Dual Token</span>
+      <h2 data-i18n="index.dualTitle">Dual-token model: separating compliance and liquidity</h2>
+      <p data-i18n="index.dualDesc">Strict points domestically, pure utility token overseas — two tracks that never cross.</p>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="card gold-border">
+        <span class="badge solid" data-i18n="index.jbp.title">Jebi Point (JBP)</span>
+        <ul style="margin-top:14px;">
+          <li data-i18n="index.jbp.li1">Anchored to fiat (1 JBP = 0.1 CNY), internal accounting only</li>
+          <li data-i18n="index.jbp.li2">No secondary-market trading, no two-way fiat conversion</li>
+          <li data-i18n="index.jbp.li3">Used for consumption discounts, limited bean redemption, service fees</li>
+          <li data-i18n="index.jbp.li4">Subject to prepaid-card rules: single top-up cap, 7-day cooling-off</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge gold" data-i18n="index.jbt.title">Jebi Token (JBT)</span>
+        <ul style="margin-top:14px;">
+          <li data-i18n="index.jbt.li1">Pure utility: governance voting + service-fee discounts + ecosystem payment</li>
+          <li data-i18n="index.jbt.li2">No dividend, revenue-share or buyback promises — avoids security status</li>
+          <li data-i18n="index.jbt.li3">Contribution incentives described as service rewards, not mining rights</li>
+          <li data-i18n="index.jbt.li4">If profit distribution is ever needed, switch to the security path (STO / licensed)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid grid-3">
+      <div><div class="brand" style="font-size:24px;">JEBI</div><p style="font-size:13.5px; color:var(--text-2); margin-top:10px;" data-i18n="common.brandTag"></p></div>
+      <div><h4 data-i18n="common.links"></h4><a href="index.html" data-i18n="common.backHome"></a><a href="franchise.html" data-i18n="common.franchiseManual"></a><a href="demo.html" data-i18n="common.viewDemo"></a><a href="architecture.html" data-i18n="common.techArch"></a><a href="contact.html" data-i18n="nav.contact"></a></div>
+      <div><h4 data-i18n="common.lang"></h4><a href="#" data-lang-link="en">English</a><a href="#" data-lang-link="zh">简体中文</a><a href="#" data-lang-link="ar">العربية السعودية</a></div>
+    </div>
+    <div class="disclaimer" data-i18n="common.disclaimer"></div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--text-2);" data-i18n="common.copyright">© <span id="year">2025</span> JEBI · jebi.one</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="langModal" hidden>
+  <div class="modal">
+    <div class="brand" style="font-size:30px;">JEBI</div>
+    <h2 data-i18n="modal.title"></h2>
+    <p class="sub" data-i18n="modal.subtitle"></p>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span><b data-i18n="modal.en"></b><span data-i18n="modal.enDesc"></span></span></button>
+      <button class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span><span><b data-i18n="modal.zh"></b><span data-i18n="modal.zhDesc"></span></span></button>
+      <button class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span><span><b data-i18n="modal.ar"></b><span data-i18n="modal.arDesc"></span></span></button>
+    </div>
+  </div>
+</div>
+
+  <script src="assets/js/i18n-core.js"></script>
+  <script src="assets/js/i18n-shared.js"></script>
+  <script src="assets/js/i18n-index.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
