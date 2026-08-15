@@ -1,4 +1,9 @@
-# Jebi Coffee — AI 咖啡产业操作系统（修正版 v2）
+﻿# Jebi Coffee — AI 咖啡产业操作系统（修正版 v2）
+
+[![CI](https://github.com/erikcywong/jebi.ai/actions/workflows/ci.yml/badge.svg)](https://github.com/erikcywong/jebi.ai/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Ferikcywong.github.io%2Fjebi.ai%2F)](https://erikcywong.github.io/jebi.ai/)
+[![Languages: EN / 中文 / العربية](https://img.shields.io/badge/languages-EN%20%2F%20%E4%B8%AD%E6%96%87%20%2F%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-orange.svg)](web/)
 
 > 品牌/域名：Jebi Coffee（jebi.one）
 > 一句话：把 **DeepSeek 大模型当作「电」**，把 **咖啡产业链实体能力当作「载体」**，用 **JBP/JBT Token 计量每一次能力调用**，
@@ -53,6 +58,14 @@
         ├── tests/test_billing.py       # 统一计价回归测试（pytest 或直接运行）
         ├── requirements.txt
         └── .env.example
+
+## 在线预览（GitHub Pages）
+
+三语官网（首页 / 加盟商 / 业务演示 / 技术架构）已由 GitHub Pages 自动部署：
+
+- **https://erikcywong.github.io/jebi.ai/**
+
+> 说明：品牌页与加盟页可完全静态访问；**业务演示台**需要真实后端（JBP 计量计费），请按「快速开始」在本地启动后访问。首次打开首页会弹出语言选择弹窗（English / 简体中文 / العربية السعودية）。
 
 ## 多语言（EN / 简体中文 / العربية السعودية）
 
