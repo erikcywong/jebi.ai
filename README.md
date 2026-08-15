@@ -1,4 +1,4 @@
-﻿# Jebi Coffee — AI 咖啡产业操作系统（修正版 v2）
+# Jebi Coffee — AI 咖啡产业操作系统（修正版 v2）
 
 [![CI](https://github.com/erikcywong/jebi.ai/actions/workflows/ci.yml/badge.svg)](https://github.com/erikcywong/jebi.ai/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -66,6 +66,16 @@
 - **https://erikcywong.github.io/jebi.ai/**
 
 > 说明：品牌页与加盟页可完全静态访问；**业务演示台**需要真实后端（JBP 计量计费），请按「快速开始」在本地启动后访问。首次打开首页会弹出语言选择弹窗（English / 简体中文 / العربية السعودية）。
+
+## 站点结构（分区子页 + 联系页）
+
+导航下拉菜单的每个分区均有独立子页（如 concept.html / ai-services.html / price-quote.html …），并新增 **Contact us** 菜单：
+
+- WhatsApp：+852 9318 8252（[wa.me/85293188252](https://wa.me/85293188252)）
+- WeChat：+86 158 0022 2338（点击复制）
+- Email：erik.wong@napell.bio
+
+生成方式：修改分区内容后运行 `node scripts/gen_subpages.js` 可重新生成全部子页。
 
 ## 多语言（EN / 简体中文 / العربية السعودية）
 
