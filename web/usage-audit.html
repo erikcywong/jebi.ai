@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="demo.audit.h3">JEBI</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">JEBI<span class="tagline" data-i18n="common.brandTag"></span></a>
+    <nav class="nav">
+      <div class="nav-item">
+        <a class="nav-link" href="index.html"><span data-i18n="nav.home"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.home"></div>
+          <a href="concept.html" data-i18n="nav.homeSub.concept"></a>
+          <a href="token-economy.html" data-i18n="nav.homeSub.tokens"></a>
+          <a href="revenue.html" data-i18n="nav.homeSub.revenue"></a>
+          <a href="roadmap.html" data-i18n="nav.homeSub.roadmap"></a>
+          <a href="compliance.html" data-i18n="nav.homeSub.compliance"></a>
+          <a class="dd-strong" href="index.html" data-i18n="nav.home"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="franchise.html"><span data-i18n="nav.franchise"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.franchise"></div>
+          <a href="franchise-models.html" data-i18n="nav.franchiseSub.models"></a>
+          <a href="ai-services.html" data-i18n="nav.franchiseSub.services"></a>
+          <a href="daily-sop.html" data-i18n="nav.franchiseSub.sop"></a>
+          <a href="data-rewards.html" data-i18n="nav.franchiseSub.data"></a>
+          <a href="faq.html" data-i18n="nav.franchiseSub.faq"></a>
+          <a class="dd-strong" href="franchise.html" data-i18n="nav.franchise"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link active" href="demo.html"><span data-i18n="nav.demo"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.demo"></div>
+          <a href="price-quote.html" data-i18n="nav.demoSub.quote"></a>
+          <a href="ai-recommendation.html" data-i18n="nav.demoSub.recommend"></a>
+          <a href="usage-audit.html" data-i18n="nav.demoSub.audit"></a>
+          <a class="dd-strong" href="demo.html" data-i18n="nav.demo"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="architecture.html"><span data-i18n="nav.arch"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.arch"></div>
+          <a href="system-layers.html" data-i18n="nav.archSub.layers"></a>
+          <a href="api-routes.html" data-i18n="nav.archSub.api"></a>
+          <a href="smart-contracts.html" data-i18n="nav.archSub.contracts"></a>
+          <a href="data-flow.html" data-i18n="nav.archSub.dataflow"></a>
+          <a class="dd-strong" href="architecture.html" data-i18n="nav.arch"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="contact.html"><span data-i18n="nav.contact"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.contact"></div>
+          <a href="https://wa.me/85293188252" target="_blank" rel="noopener" data-i18n="nav.contactSub.whatsapp"></a>
+          <a href="#" data-copy="+8615800222338" data-i18n="nav.contactSub.wechat"></a>
+          <a href="mailto:erik.wong@napell.bio" data-i18n="nav.contactSub.email"></a>
+          <a class="dd-strong" href="contact.html" data-i18n="nav.contact"></a>
+        </div>
+      </div>
+    </nav>
+    <button class="lang-btn" id="langBtn" data-i18n-title="nav.langTitle" aria-label="Language"><span>🌐</span><span id="langLabel">EN</span></button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="demo-hero">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <span class="kicker" data-i18n="demo.heroKicker"></span>
+        <h1 style="font-size:clamp(26px,3.6vw,38px); margin-top:8px;" data-i18n="demo.audit.h3"></h1>
+        <p style="color:var(--text-2); margin-top:6px; max-width:640px;" data-i18n="demo.audit.hint"></p>
+      </div>
+      <span class="demo-status"><span class="dot" id="connDot"></span><span id="connText" data-i18n="status.connecting"></span></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:36px;">
+  <div class="container">
+    <div class="flow-strip">
+      <div class="card"><b data-i18n="demo.flow1.b"></b><span data-i18n="demo.flow1.s"></span></div>
+      <div class="card"><b data-i18n="demo.flow2.b"></b><span data-i18n="demo.flow2.s"></span></div>
+      <div class="card"><b data-i18n="demo.flow3.b"></b><span data-i18n="demo.flow3.s"></span></div>
+      <div class="card"><b data-i18n="demo.flow4.b"></b><span data-i18n="demo.flow4.s"></span></div>
+    </div>
+    <div class="demo-layout">
+      <div class="panel">
+        <h3 data-i18n="demo.user.h3"> <span class="hint" data-i18n="demo.user.hint"></span></h3>
+        <div class="role-cards">
+          <button class="role-card" data-role="business"><b data-i18n="demo.role.business.b"></b><span data-i18n="demo.role.business.s"></span></button>
+          <button class="role-card" data-role="consumer_bundle"><b data-i18n="demo.role.bundle.b"></b><span data-i18n="demo.role.bundle.s"></span></button>
+          <button class="role-card" data-role="consumer_payg"><b data-i18n="demo.role.payg.b"></b><span data-i18n="demo.role.payg.s"></span></button>
+        </div>
+        <div class="field-row">
+          <div class="field" style="margin:0;"><label data-i18n="demo.userId"></label><input id="userId" value="demo_user" /></div>
+          <button class="btn outline small" id="genId" data-i18n="demo.gen"></button>
+        </div>
+        <div class="field" style="margin-top:12px;">
+          <label data-i18n="demo.topupLabel"></label>
+          <div class="field-row"><input id="topupAmt" type="number" min="1" max="10000" value="1000" /><button class="btn primary small" id="btnTopup" data-i18n="demo.topupBtn"></button></div>
+        </div>
+        <div class="kpi-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="kpi"><b id="kpiBalance">–</b><span data-i18n="demo.kpiBalance"></span></div>
+          <div class="kpi"><b id="kpiSub">–</b><span data-i18n="demo.kpiSub"></span></div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn outline small" id="btnSubscribe" style="display:none;" data-i18n="demo.subBtn"></button>
+          <button class="btn outline small" id="btnRefund" data-i18n="demo.refundBtn"></button>
+        </div>
+        <hr class="divider" />
+        <div class="mono" data-i18n-html="demo.legend" style="font-size:12px; color:var(--text-2); line-height:1.9;"></div>
+      </div>
+      <div>
+        <div id="msgBox" class="msg-banner"></div>
+        <div class="panel" id="audit">
+          <h3 data-i18n="demo.audit.h3"> <span class="hint" data-i18n="demo.audit.hint"></span></h3>
+          <div class="kpi-grid">
+            <div class="kpi"><b id="sCalls">–</b><span data-i18n="demo.kpiCalls"></span></div>
+            <div class="kpi"><b id="sCost">–</b><span data-i18n="demo.kpiCostSum"></span></div>
+            <div class="kpi"><b id="sCharged">–</b><span data-i18n="demo.kpiCharged"></span></div>
+          </div>
+          <button class="btn outline small" id="btnSummary" style="width:100%;" data-i18n="demo.refreshAudit"></button>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:22px; border-color:rgba(212,168,84,0.4);">
+      <h3 style="font-size:15px;" data-i18n="demo.note.h3"></h3>
+      <p style="font-size:13.5px; color:var(--text-2); margin-top:6px;" data-i18n-html="demo.noteP"></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid grid-3">
+      <div><div class="brand" style="font-size:24px;">JEBI</div><p style="font-size:13.5px; color:var(--text-2); margin-top:10px;" data-i18n="common.brandTag"></p></div>
+      <div><h4 data-i18n="common.links"></h4><a href="index.html" data-i18n="common.backHome"></a><a href="franchise.html" data-i18n="common.franchiseManual"></a><a href="demo.html" data-i18n="common.viewDemo"></a><a href="architecture.html" data-i18n="common.techArch"></a><a href="contact.html" data-i18n="nav.contact"></a></div>
+      <div><h4 data-i18n="common.lang"></h4><a href="#" data-lang-link="en">English</a><a href="#" data-lang-link="zh">简体中文</a><a href="#" data-lang-link="ar">العربية السعودية</a></div>
+    </div>
+    <div class="disclaimer" data-i18n="common.disclaimer"></div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--text-2);" data-i18n="common.copyright">© <span id="year">2025</span> JEBI · jebi.one</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="langModal" hidden>
+  <div class="modal">
+    <div class="brand" style="font-size:30px;">JEBI</div>
+    <h2 data-i18n="modal.title"></h2>
+    <p class="sub" data-i18n="modal.subtitle"></p>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span><b data-i18n="modal.en"></b><span data-i18n="modal.enDesc"></span></span></button>
+      <button class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span><span><b data-i18n="modal.zh"></b><span data-i18n="modal.zhDesc"></span></span></button>
+      <button class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span><span><b data-i18n="modal.ar"></b><span data-i18n="modal.arDesc"></span></span></button>
+    </div>
+  </div>
+</div>
+
+  <script src="assets/js/i18n-core.js"></script>
+  <script src="assets/js/i18n-shared.js"></script>
+  <script src="assets/js/i18n-demo.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/demo.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
