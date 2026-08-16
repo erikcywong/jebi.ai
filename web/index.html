@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="PAGE.title">JEBI — AI-native coffee platform</title>
+  <meta name="description" content="JEBI — the world's first AI-native coffee chain & industry enablement platform." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-automodal="1">
+
+<!-- 顶栏 -->
+<header class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">JEBI<span class="tagline" data-i18n="common.brandTag"></span></a>
+    <nav class="nav">
+      <div class="nav-item">
+        <a class="nav-link active" href="index.html"><span data-i18n="nav.home"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.home"></div>
+          <a href="concept.html" data-i18n="nav.homeSub.concept"></a>
+          <a href="token-economy.html" data-i18n="nav.homeSub.tokens"></a>
+          <a href="revenue.html" data-i18n="nav.homeSub.revenue"></a>
+          <a href="roadmap.html" data-i18n="nav.homeSub.roadmap"></a>
+          <a href="compliance.html" data-i18n="nav.homeSub.compliance"></a>
+          <a class="dd-strong" href="index.html" data-i18n="nav.home"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="franchise.html"><span data-i18n="nav.franchise"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.franchise"></div>
+          <a href="franchise-models.html" data-i18n="nav.franchiseSub.models"></a>
+          <a href="ai-services.html" data-i18n="nav.franchiseSub.services"></a>
+          <a href="daily-sop.html" data-i18n="nav.franchiseSub.sop"></a>
+          <a href="data-rewards.html" data-i18n="nav.franchiseSub.data"></a>
+          <a href="faq.html" data-i18n="nav.franchiseSub.faq"></a>
+          <a class="dd-strong" href="franchise.html" data-i18n="nav.franchise"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="demo.html"><span data-i18n="nav.demo"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.demo"></div>
+          <a href="price-quote.html" data-i18n="nav.demoSub.quote"></a>
+          <a href="ai-recommendation.html" data-i18n="nav.demoSub.recommend"></a>
+          <a href="usage-audit.html" data-i18n="nav.demoSub.audit"></a>
+          <a class="dd-strong" href="demo.html" data-i18n="nav.demo"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="architecture.html"><span data-i18n="nav.arch"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.arch"></div>
+          <a href="system-layers.html" data-i18n="nav.archSub.layers"></a>
+          <a href="api-routes.html" data-i18n="nav.archSub.api"></a>
+          <a href="smart-contracts.html" data-i18n="nav.archSub.contracts"></a>
+          <a href="data-flow.html" data-i18n="nav.archSub.dataflow"></a>
+          <a class="dd-strong" href="architecture.html" data-i18n="nav.arch"></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="contact.html"><span data-i18n="nav.contact"></span><span class="caret">▾</span></a>
+        <div class="dropdown">
+          <div class="dd-label" data-i18n="nav.contact"></div>
+          <a href="https://wa.me/85293188252" target="_blank" rel="noopener" data-i18n="nav.contactSub.whatsapp"></a>
+          <a href="#" data-copy="+8615800222338" data-i18n="nav.contactSub.wechat"></a>
+          <a href="mailto:erik.wong@napell.bio" data-i18n="nav.contactSub.email"></a>
+          <a class="dd-strong" href="contact.html" data-i18n="nav.contact"></a>
+        </div>
+      </div>
+    </nav>
+    <button class="lang-btn" id="langBtn" data-i18n-title="nav.langTitle" aria-label="Language"><span>🌐</span><span id="langLabel">EN</span></button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <span class="badge gold" data-i18n="index.heroBadge">The world's first AI-native coffee chain &amp; industry enablement platform</span>
+    <h1 data-i18n-html="index.heroTitle">Treat <em>AI</em> as electricity,<br/>and <em>coffee</em> as the conductor.</h1>
+    <p class="lead" data-i18n="index.heroLead">We reorganize the coffee supply chain with the DeepSeek LLM: every stage becomes a measurable, tradable, incentivizable digital service.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="demo.html" data-i18n="index.ctaDemo">Try the live demo</a>
+      <a class="btn outline" href="franchise.html" data-i18n="index.ctaFranchise">Become a franchisee</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-i18n="index.stat1.b">DeepSeek</b><span data-i18n="index.stat1.s">Jebi Brain industry model engine</span></div>
+      <div class="stat"><b data-i18n="index.stat2.b">JBP / JBT</b><span data-i18n="index.stat2.s">Dual-token economy</span></div>
+      <div class="stat"><b data-i18n="index.stat3.b">Full chain</b><span data-i18n="index.stat3.s">Metering loop from bean to cup</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 卖电概念 -->
+<section class="section" id="concept">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.conceptKicker">Core Idea</span>
+      <h2 data-i18n="index.conceptTitle">Selling tokens is selling electricity</h2>
+      <p data-i18n="index.conceptDesc">The grid does not make money from selling meters, but from toll fees — so do we: every AI inference, every roast, every warehouse receipt is a measurable capability call.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="card"><div class="icon">⚡</div><h3 data-i18n="index.card1.t">Capability packaging</h3><p data-i18n="index.card1.d">Roasting capacity, warehousing attestation, store space, AI compute, farming plans — packaged as standardized service bundles.</p></div>
+      <div class="card"><div class="icon">🎟️</div><h3 data-i18n="index.card2.t">Tokenization</h3><p data-i18n="index.card2.d">Each bundle maps to measurable, tradable, incentivizable token rights: roast packs, receipts, wisdom packs, carbon credits.</p></div>
+      <div class="card"><div class="icon">🏭</div><h3 data-i18n="index.card3.t">Capability fees</h3><p data-i18n="index.card3.d">When tokens are consumed, real resources are invoked, and the platform charges a service fee per flow — like the grid charges a toll.</p></div>
+    </div>
+    <div class="table-wrap reveal" style="margin-top:24px;">
+      <table class="table">
+        <thead><tr><th data-i18n="index.tab.h1">Industry capability (electricity)</th><th data-i18n="index.tab.h2">Packaging (compute)</th><th data-i18n="index.tab.h3">Tokenized service (API call)</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="index.tab.r1c1">Roasting capacity</td><td data-i18n="index.tab.r1c2">Standardized roast-curve library</td><td data-i18n="index.tab.r1c3">Roast-pack token: per kg/batch, flavored roasting service</td></tr>
+          <tr><td data-i18n="index.tab.r2c1">Warehousing &amp; finance</td><td data-i18n="index.tab.r2c2">Climate-controlled receipts + AI inspection</td><td data-i18n="index.tab.r2c3">Receipt token: 1 unit = 1 g of premium green beans</td></tr>
+          <tr><td data-i18n="index.tab.r3c1">AI compute (DeepSeek)</td><td data-i18n="index.tab.r3c2">Jebi Brain industry model</td><td data-i18n="index.tab.r3c3">Wisdom token: billed by API usage (meter first, then price)</td></tr>
+          <tr><td data-i18n="index.tab.r4c1">Tissue-culture / mist farming</td><td data-i18n="index.tab.r4c2">Standard farming plans &amp; equipment</td><td data-i18n="index.tab.r4c3">Planting-pack token: standard fresh-fruit capacity</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 三大支柱 -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.pillarsKicker">Three Pillars</span>
+      <h2 data-i18n="index.pillarsTitle">Three core pillars</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="card"><div class="icon">🧠</div><h3 data-i18n="index.p1.t">AI engine</h3><p data-i18n="index.p1.d">Jebi Brain on the DeepSeek API: quality inspection, supply-chain forecasting, recommendations, store ops assistant, carbon tracking.</p></div>
+      <div class="card"><div class="icon">☕</div><h3 data-i18n="index.p2.t">Physical network</h3><p data-i18n="index.p2.d">Owned/franchised cafés, partner farms, roasteries, warehousing &amp; logistics — physical assets as the compute carrier.</p></div>
+      <div class="card"><div class="icon">🪙</div><h3 data-i18n="index.p3.t">Token economy</h3><p data-i18n="index.p3.d">JBP platform points + JBT overseas utility token as the platform's universal value unit.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 双 Token -->
+<section class="section" id="tokens">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.dualKicker">Dual Token</span>
+      <h2 data-i18n="index.dualTitle">Dual-token model: separating compliance and liquidity</h2>
+      <p data-i18n="index.dualDesc">Strict points domestically, pure utility token overseas — two tracks that never cross.</p>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="card gold-border">
+        <span class="badge solid" data-i18n="index.jbp.title">Jebi Point (JBP)</span>
+        <ul style="margin-top:14px;">
+          <li data-i18n="index.jbp.li1">Anchored to fiat (1 JBP = 0.1 CNY), internal accounting only</li>
+          <li data-i18n="index.jbp.li2">No secondary-market trading, no two-way fiat conversion</li>
+          <li data-i18n="index.jbp.li3">Used for consumption discounts, limited bean redemption, service fees</li>
+          <li data-i18n="index.jbp.li4">Subject to prepaid-card rules: single top-up cap, 7-day cooling-off</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge gold" data-i18n="index.jbt.title">Jebi Token (JBT)</span>
+        <ul style="margin-top:14px;">
+          <li data-i18n="index.jbt.li1">Pure utility: governance voting + service-fee discounts + ecosystem payment</li>
+          <li data-i18n="index.jbt.li2">No dividend, revenue-share or buyback promises — avoids security status</li>
+          <li data-i18n="index.jbt.li3">Contribution incentives described as service rewards, not mining rights</li>
+          <li data-i18n="index.jbt.li4">If profit distribution is ever needed, switch to the security path (STO / licensed)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Token 流转闭环 -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.flowKicker">Token Flow</span>
+      <h2 data-i18n="index.flowTitle">Token circulation loop</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b data-i18n="index.flow.s1.b">Top up</b><span data-i18n="index.flow.s1.s">User pays fiat → tops up JBP (caps + cooling-off refund)</span></div>
+      <div class="step"><b data-i18n="index.flow.s2.b">Consume</b><span data-i18n="index.flow.s2.s">Coffee subscription / AI calls / roast packs / receipts</span></div>
+      <div class="step"><b data-i18n="index.flow.s3.b">Meter</b><span data-i18n="index.flow.s3.s">Cost DeepSeek from actual usage first, then price by role</span></div>
+      <div class="step"><b data-i18n="index.flow.s4.b">Record</b><span data-i18n="index.flow.s4.s">Deduct JBP → write ai_usage_logs → reconcile with DeepSeek invoices</span></div>
+      <div class="step"><b data-i18n="index.flow.s5.b">Settle</b><span data-i18n="index.flow.s5.s">Service providers receive JBP → pay platform fees / withdraw (B-side channel)</span></div>
+      <div class="step"><b data-i18n="index.flow.s6.b">Incentivize</b><span data-i18n="index.flow.s6.s">Platform charges 1-3% flow fees, rewards data &amp; liquidity contributors</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 收入模型 -->
+<section class="section" id="revenue">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.revKicker">Revenue</span>
+      <h2 data-i18n="index.revTitle">Phased revenue model</h2>
+      <p data-i18n="index.revDesc">AI revenue is the electricity bill — first the meter, then the bill.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="table">
+        <thead><tr><th data-i18n="index.rev.h1">Phase</th><th data-i18n="index.rev.h2">Store scale</th><th data-i18n="index.rev.h3">Supply-chain / store share</th><th data-i18n="index.rev.h4">AI fees</th><th data-i18n="index.rev.h5">Receipt/carbon fees</th><th data-i18n="index.rev.h6">Data value</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="index.rev.r1p1">I (0-6 mo)</td><td data-i18n="index.rev.r1p2">2-3 owned stores</td><td class="num">70%</td><td class="num">5%</td><td class="num">15%</td><td class="num">10%</td></tr>
+          <tr><td data-i18n="index.rev.r2p1">II (6-18 mo)</td><td data-i18n="index.rev.r2p2">50 franchised stores</td><td class="num">55%</td><td class="num">20%</td><td class="num">15%</td><td class="num">10%</td></tr>
+          <tr><td data-i18n="index.rev.r3p1">III (18-36 mo)</td><td data-i18n="index.rev.r3p2">Overseas + ecosystem</td><td class="num">40%</td><td class="num">30%</td><td class="num">20%</td><td class="num">10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 数据飞轮 -->
+<section class="section alt">
+  <div class="container split">
+    <div class="reveal">
+      <span class="kicker" data-i18n="index.flyKicker">Data Flywheel</span>
+      <h2 style="margin:10px 0 14px;" data-i18n="index.flyTitle">Data flywheel (with clear boundaries)</h2>
+      <p style="color:var(--text-2);" data-i18n="index.flyP">Anonymized telemetry becomes the platform's own data asset.</p>
+      <ul style="margin:14px 0 0 18px; color:var(--text-2);">
+        <li data-i18n="index.fly.li1">Only the current session context is sent to DeepSeek</li>
+        <li data-i18n="index.fly.li2">The DeepSeek API does not train on your data by default</li>
+        <li data-i18n="index.fly.li3">PIPL: informed consent, purpose limitation, deletion rights</li>
+      </ul>
+    </div>
+    <div class="aside reveal">
+      <div class="card">
+        <div class="mono" data-i18n-html="index.fly.diagram" style="line-height:2;">[Store/consumer/supply telemetry]<br/>&nbsp;&nbsp;&nbsp;&nbsp;│ anonymize · PIPL consent<br/>&nbsp;&nbsp;&nbsp;&nbsp;▼<br/>[Platform data warehouse] ─► features / risk / Jebi-Small<br/>&nbsp;&nbsp;&nbsp;&nbsp;│<br/>&nbsp;&nbsp;&nbsp;&nbsp;▼<br/>[Jebi Brain] ──each inference──► DeepSeek API</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 路线图 -->
+<section class="section" id="roadmap">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.roadKicker">Roadmap</span>
+      <h2 data-i18n="index.roadTitle">Implementation path</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item"><span class="tag gold" data-i18n="index.road.r1.tag">Phase I · 0-6 months</span><h4 data-i18n="index.road.r1.h">Validate model &amp; loop</h4><p data-i18n="index.road.r1.p">Build jebi.one, integrate DeepSeek, ship the Jebi Brain MVP; open 2-3 owned AI cafés; pilot roast packs and receipts.</p></div>
+      <div class="tl-item"><span class="tag gold" data-i18n="index.road.r2.tag">Phase II · 6-18 months</span><h4 data-i18n="index.road.r2.h">Scale</h4><p data-i18n="index.road.r2.p">Open franchising, reach 50 stores; launch the consortium chain; bring in financial institutions for receipt-backed lending.</p></div>
+      <div class="tl-item"><span class="tag gold" data-i18n="index.road.r3.tag">Phase III · 18-36 months</span><h4 data-i18n="index.road.r3.h">Ecosystem &amp; finance</h4><p data-i18n="index.road.r3.p">Issue JBT overseas, open the Jebi Brain API; launch coffee REITs; complete the AI + coffee + finance loop.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 合规 -->
+<section class="section alt" id="compliance">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker" data-i18n="index.compKicker">Compliance</span>
+      <h2 data-i18n="index.compTitle">Compliance red lines (veto items)</h2>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="card"><h3 data-i18n="index.comp.c1.h">🪪 Points, not a token</h3><p data-i18n="index.comp.c1.p">Domestically points only (JBP): no issuing or covertly issuing crypto; in-platform consumption only.</p></div>
+      <div class="card"><h3 data-i18n="index.comp.c2.h">💳 Prepaid-card regulation</h3><p data-i18n="index.comp.c2.p">1,000 CNY single top-up cap, 5,000 CNY balance cap, 7-day cooling-off refund, escrow.</p></div>
+      <div class="card"><h3 data-i18n="index.comp.c3.h">📦 Receipt registration</h3><p data-i18n="index.comp.c3.p">Receipt tokens must correspond to physical goods, bound to a registration number, third-party audit against double pledging.</p></div>
+      <div class="card"><h3 data-i18n="index.comp.c4.h">🔐 Data compliance</h3><p data-i18n="index.comp.c4.p">Domestic storage and anonymization; DeepSeek terms; 180-day logs then deletion; deletion rights.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="card reveal" style="text-align:center; padding:44px 30px; border-color:rgba(212,168,84,0.45);">
+      <h2 data-i18n="index.ctaTitle">Every cup is data-driven, token-incentivized, community-owned.</h2>
+      <p style="color:var(--text-2); margin:10px 0 22px;" data-i18n="index.ctaP">Open the live demo and see how meter-first, price-second actually runs.</p>
+      <a class="btn primary" href="demo.html" data-i18n="index.ctaBtn">Enter the live demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div class="container">
+    <div class="grid grid-3">
+      <div>
+        <div class="brand" style="font-size:24px;">JEBI</div>
+        <p style="font-size:13.5px; color:var(--text-2); margin-top:10px;" data-i18n="common.brandTag">AI-native coffee platform</p>
+      </div>
+      <div>
+        <h4 data-i18n="common.links">Links</h4>
+        <a href="index.html" data-i18n="common.backHome">Home</a>
+        <a href="franchise.html" data-i18n="common.franchiseManual">Franchise manual</a>
+        <a href="demo.html" data-i18n="common.viewDemo">Live demo</a>
+        <a href="architecture.html" data-i18n="common.techArch">Architecture</a>
+      </div>
+      <div>
+        <h4 data-i18n="common.lang">Language</h4>
+        <a href="#" data-lang-link="en">English</a>
+        <a href="#" data-lang-link="zh">简体中文</a>
+        <a href="#" data-lang-link="ar">العربية السعودية</a>
+      </div>
+    </div>
+    <div class="disclaimer" data-i18n="common.disclaimer">Disclaimer: technical reference demo — not investment advice.</div>
+    <div style="margin-top:10px; font-size:12.5px; color:var(--text-2);" data-i18n="common.copyright">© <span id="year">2025</span> JEBI · jebi.one</div>
+  </div>
+</footer>
+
+<!-- 语言弹窗 -->
+<div class="modal-overlay" id="langModal" hidden>
+  <div class="modal">
+    <div class="brand" style="font-size:30px;">JEBI</div>
+    <h2 data-i18n="modal.title">Choose your language</h2>
+    <p class="sub" data-i18n="modal.subtitle">The website will be displayed in your chosen language.</p>
+    <div class="lang-options">
+      <button class="lang-option" data-lang="en"><span class="flag">🇺🇸</span><span><b data-i18n="modal.en">English</b><span data-i18n="modal.enDesc">English</span></span></button>
+      <button class="lang-option" data-lang="zh"><span class="flag">🇨🇳</span><span><b data-i18n="modal.zh">简体中文</b><span data-i18n="modal.zhDesc">Mandarin Chinese</span></span></button>
+      <button class="lang-option" data-lang="ar"><span class="flag">🇸🇦</span><span><b data-i18n="modal.ar">العربية السعودية</b><span data-i18n="modal.arDesc">Saudi Arabic</span></span></button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/i18n-core.js"></script>
+<script src="assets/js/i18n-shared.js"></script>
+<script src="assets/js/i18n-index.js"></script>
+<script src="assets/js/nav.js"></script>
+</body>
+</html>
