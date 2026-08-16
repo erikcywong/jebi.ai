@@ -1,5 +1,12 @@
 /* 顶栏：移动端菜单 + 触控下拉 + 滚动显现 + 页脚年份 + i18n 初始化 */
 (function () {
+  var topbar = document.querySelector('.topbar');
+  if (topbar) {
+    var onScroll = function () { topbar.classList.toggle('scrolled', window.scrollY > 10); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');
   if (toggle && nav) {
